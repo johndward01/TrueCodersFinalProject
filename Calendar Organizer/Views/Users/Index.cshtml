@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Guest>
+
+<h2>Guests</h2>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Nick Name</th>
+        <th>User Name</th>
+        <th>Password</th>
+    </tr>
+
+    @foreach (var guest in Model)
+    {
+        <tr>
+            <td><a href=/Users/ViewUsers/@guest.userID>@guest.userID</a></td>
+            <td>@guest.nickName</td>
+            <td>@guest.userName</td>
+            <td>@guest.password</td>           
+        </tr>
+    }
+</table>
